@@ -1,0 +1,15 @@
+footer {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    background-color: #2E0039;
+    width: 100%;
+    padding: 3%;
+    text-align: center;
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 4vw;
+        margin: 0 5%;
+    }
+}

@@ -17,4 +17,58 @@ header svg {
 header h1 {
   font-size: 6vw;
   color: #2E0039;
+}
+
+#convertidor {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 7% 6% 14% 6%;
+  color: white;
+  background-color: #2E0039;
+  padding: 5%;
+  border-radius: 20px;
+  align-items: center;
+}
+#convertidor h1 {
+  width: 100%;
+  margin-bottom: 5%;
+}
+#convertidor select {
+  width: 60%;
+  margin: 4% 0%;
+  background: #2E0039;
+  color: white;
+  border: none;
+  border-bottom: 2px solid white;
+}
+#convertidor .exchange {
+  margin-left: 5%;
+  width: 6%;
+}
+#convertidor input {
+  width: 60%;
+  margin: 4% 0%;
+  border: none;
+  color: white;
+  border-bottom: 2px solid white;
+  background-color: #2E0039;
+}
+#convertidor .tipoUnidad {
+  width: 0%;
+  margin-left: 5%;
+  font-size: 4vw;
+  margin-right: 30%;
+}
+#convertidor .heart {
+  width: 6%;
+  margin: 4% 0;
+}
+#convertidor #resultado {
+  width: 49%;
+  margin-left: 5%;
+  text-align: right;
+  font-size: 7vw;
+}
+#convertidor .tipoUnidad-resultado {
+  font-size: 7vw;
 }/*# sourceMappingURL=estilos.css.map */

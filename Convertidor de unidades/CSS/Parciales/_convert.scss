@@ -1,0 +1,54 @@
+#convertidor {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 7% 6% 14% 6%;
+    color: white;
+    background-color: $colorPrincipal;
+    padding: 5%;
+    border-radius: 20px;
+    align-items: center;
+    h1 {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    select {
+        width: 60%;
+        margin: 4% 0%;
+        background: $colorPrincipal;
+        color: white;
+        border: none;
+        border-bottom: 2px solid white;
+    }
+    .exchange {
+        margin-left: 5%;
+        width: 6%;
+    }
+    input {
+        width: 60%;
+        margin: 4% 0%;
+        border: none;
+        color: white;
+        border-bottom: 2px solid white;
+        background-color: $colorPrincipal;
+    }
+    .tipoUnidad {
+        width: 0%;
+        margin-left: 5%;
+        font-size: 4vw;
+        margin-right: 30%;
+    }
+    .heart {
+        width: 6%;
+        margin: 4% 0;
+    }
+    #resultado {
+        width: 49%;
+        margin-left: 5%;
+        text-align: right;
+        font-size: 7vw;
+    }
+
+    .tipoUnidad-resultado {
+        font-size: 7vw;
+    }
+}

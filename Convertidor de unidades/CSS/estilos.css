@@ -52,6 +52,7 @@ header h1 {
   color: white;
   border-bottom: 2px solid white;
   background-color: #2E0039;
+  text-align: end;
 }
 #convertidor .tipoUnidad {
   width: 0%;
@@ -84,17 +85,15 @@ header h1 {
 }
 
 footer {
-  display: block;
-  position: absolute;
-  bottom: 0px;
   background-color: #2E0039;
   width: 100%;
-  padding: 3%;
+  padding: 2%;
   text-align: center;
+  margin-top: 16%;
 }
 footer a {
   text-decoration: none;
   color: white;
-  font-size: 4vw;
+  font-size: 3vw;
   margin: 0 5%;
 }/*# sourceMappingURL=estilos.css.map */

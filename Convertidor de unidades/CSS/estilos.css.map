@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"estilos.css"}
+{"version":3,"sources":["Parciales/_header.scss","estilos.css","Parciales/_variables.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;EACA,SAAA;EACA,sBAAA;ACCJ;;ADEA;EACI,aAAA;EACA,mBAAA;EACA,0CAAA;ACCJ;ADAI;EACI,SAAA;EACA,mBAAA;EACA,cEbS;ADejB;ADAI;EACI,cAAA;EACA,cEjBS;ADmBjB","file":"estilos.css"}

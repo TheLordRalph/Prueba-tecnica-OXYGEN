@@ -10,6 +10,7 @@
     h1 {
         width: 100%;
         margin-bottom: 5%;
+        font-size: 5vw;
     }
     select {
         width: 60%;
@@ -18,10 +19,11 @@
         color: white;
         border: none;
         border-bottom: 2px solid white;
+        font-size: 2vw;
     }
     .exchange {
         margin-left: 5%;
-        width: 6%;
+        width: 5%;
     }
     input {
         width: 60%;
@@ -31,25 +33,58 @@
         border-bottom: 2px solid white;
         background-color: $colorPrincipal;
         text-align: end;
+        font-size: 2vw;
     }
     .tipoUnidad {
         width: 0%;
         margin-left: 5%;
-        font-size: 4vw;
+        font-size: 3vw;
         margin-right: 30%;
     }
     .heart {
-        width: 6%;
+        width: 8%;
         margin: 4% 0;
     }
     #resultado {
         width: 49%;
         margin-left: 5%;
         text-align: right;
-        font-size: 7vw;
+        font-size: 5vw;
+        font-weight: bold;
     }
 
     .tipoUnidad-resultado {
-        font-size: 7vw;
+        font-size: 4vw;
+        font-weight: bold;
+    }
+}
+
+
+@media (min-width: 991.98px) {
+
+    #convertidor {
+        width: 60vw;
+        margin: 7% auto 14% auto;
+        padding: 3% 6%;
+        select {
+            width: 30%;
+        }
+        input {
+            width: 30%;
+            margin: 4% 5%;
+            margin-left: 10%;
+        }
+        .tipoUnidad {
+            width: 8%;
+            margin-right: 0%;
+        }
+        #resultado {
+            margin-left: 23%;
+            font-size: 6vw;
+        }
+        .tipoUnidad-resultado {
+            width: 8%;
+            margin-left: 5%;
+        }
     }
 }

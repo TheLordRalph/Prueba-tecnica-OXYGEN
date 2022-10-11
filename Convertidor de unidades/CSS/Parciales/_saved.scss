@@ -16,7 +16,7 @@
         margin: 5% 0;
         h1 {
             color: dimgray;
-            font-size: 4vw;
+            font-size: 2vw;
             width: 80%;
         }
         svg {
@@ -24,4 +24,13 @@
             color: dimgray;
         }
     }
+}
+
+@media (min-width: 991.98px) {
+
+    #saved {
+        width: 60%;
+        margin: 7% auto 14% auto;
+    }
+
 }

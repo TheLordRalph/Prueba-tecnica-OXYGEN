@@ -19,6 +19,11 @@ header h1 {
   color: #2E0039;
 }
 
+@media (min-width: 991.98px) {
+  header svg {
+    margin: 3% 4% 2% 20%;
+  }
+}
 #convertidor {
   display: flex;
   flex-wrap: wrap;
@@ -32,6 +37,7 @@ header h1 {
 #convertidor h1 {
   width: 100%;
   margin-bottom: 5%;
+  font-size: 5vw;
 }
 #convertidor select {
   width: 60%;
@@ -40,10 +46,11 @@ header h1 {
   color: white;
   border: none;
   border-bottom: 2px solid white;
+  font-size: 2vw;
 }
 #convertidor .exchange {
   margin-left: 5%;
-  width: 6%;
+  width: 5%;
 }
 #convertidor input {
   width: 60%;
@@ -53,27 +60,57 @@ header h1 {
   border-bottom: 2px solid white;
   background-color: #2E0039;
   text-align: end;
+  font-size: 2vw;
 }
 #convertidor .tipoUnidad {
   width: 0%;
   margin-left: 5%;
-  font-size: 4vw;
+  font-size: 3vw;
   margin-right: 30%;
 }
 #convertidor .heart {
-  width: 6%;
+  width: 8%;
   margin: 4% 0;
 }
 #convertidor #resultado {
   width: 49%;
   margin-left: 5%;
   text-align: right;
-  font-size: 7vw;
+  font-size: 5vw;
+  font-weight: bold;
 }
 #convertidor .tipoUnidad-resultado {
-  font-size: 7vw;
+  font-size: 4vw;
+  font-weight: bold;
 }
 
+@media (min-width: 991.98px) {
+  #convertidor {
+    width: 60vw;
+    margin: 7% auto 14% auto;
+    padding: 3% 6%;
+  }
+  #convertidor select {
+    width: 30%;
+  }
+  #convertidor input {
+    width: 30%;
+    margin: 4% 5%;
+    margin-left: 10%;
+  }
+  #convertidor .tipoUnidad {
+    width: 8%;
+    margin-right: 0%;
+  }
+  #convertidor #resultado {
+    margin-left: 23%;
+    font-size: 6vw;
+  }
+  #convertidor .tipoUnidad-resultado {
+    width: 8%;
+    margin-left: 5%;
+  }
+}
 #saved {
   margin: 7% 6% 14% 6%;
 }
@@ -94,7 +131,7 @@ header h1 {
 }
 #saved .favorite h1 {
   color: dimgray;
-  font-size: 4vw;
+  font-size: 2vw;
   width: 80%;
 }
 #saved .favorite svg {
@@ -102,6 +139,12 @@ header h1 {
   color: dimgray;
 }
 
+@media (min-width: 991.98px) {
+  #saved {
+    width: 60%;
+    margin: 7% auto 14% auto;
+  }
+}
 footer {
   background-color: #2E0039;
   width: 100%;

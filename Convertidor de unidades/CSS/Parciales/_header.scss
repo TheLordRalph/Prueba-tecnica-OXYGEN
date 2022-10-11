@@ -18,3 +18,12 @@ header {
         color: $colorPrincipal;
     }
 }
+
+@media (min-width: 991.98px) {
+
+    header {
+        svg {
+            margin: 3% 4% 2% 20%;
+        }
+    }
+}

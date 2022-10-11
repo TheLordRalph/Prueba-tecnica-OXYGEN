@@ -75,13 +75,31 @@ header h1 {
 }
 
 #saved {
-  display: flex;
-  flex-wrap: wrap;
   margin: 7% 6% 14% 6%;
 }
 #saved h1 {
   color: gray;
   font-size: 7vw;
+}
+#saved .favorite {
+  background-color: lightgray;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 5%;
+  border: 1px solid black;
+  border-radius: 10px;
+  align-items: center;
+  margin: 5% 0;
+}
+#saved .favorite h1 {
+  color: dimgray;
+  font-size: 4vw;
+  width: 80%;
+}
+#saved .favorite svg {
+  width: 4%;
+  color: dimgray;
 }
 
 footer {

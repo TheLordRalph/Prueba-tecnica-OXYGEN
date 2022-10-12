@@ -1,10 +1,11 @@
-#saved {
+.saved {
     margin: 7% 6% 14% 6%;
     h1 {
         color: gray;
         font-size: 7vw;
     }
-    .favorite {
+    #saved {
+       .favorite {
         background-color: lightgray;
         width: 100%;
         display: flex;
@@ -23,14 +24,26 @@
             width: 4%;
             color: dimgray;
         }
+    } 
     }
+    
 }
 
 @media (min-width: 991.98px) {
 
-    #saved {
+    .saved {
         width: 60%;
         margin: 7% auto 14% auto;
+        #saved {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .favorite {
+                width: 47%;
+                h1 {
+                    font-size: 1.5vw;
+                }
+            }
+        }
     }
-
 }

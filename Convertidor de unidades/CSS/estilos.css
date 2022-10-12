@@ -111,14 +111,14 @@ header h1 {
     margin-left: 5%;
   }
 }
-#saved {
+.saved {
   margin: 7% 6% 14% 6%;
 }
-#saved h1 {
+.saved h1 {
   color: gray;
   font-size: 7vw;
 }
-#saved .favorite {
+.saved #saved .favorite {
   background-color: lightgray;
   width: 100%;
   display: flex;
@@ -129,20 +129,31 @@ header h1 {
   align-items: center;
   margin: 5% 0;
 }
-#saved .favorite h1 {
+.saved #saved .favorite h1 {
   color: dimgray;
   font-size: 2vw;
   width: 80%;
 }
-#saved .favorite svg {
+.saved #saved .favorite svg {
   width: 4%;
   color: dimgray;
 }
 
 @media (min-width: 991.98px) {
-  #saved {
+  .saved {
     width: 60%;
     margin: 7% auto 14% auto;
+  }
+  .saved #saved {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .saved #saved .favorite {
+    width: 47%;
+  }
+  .saved #saved .favorite h1 {
+    font-size: 1.5vw;
   }
 }
 footer {

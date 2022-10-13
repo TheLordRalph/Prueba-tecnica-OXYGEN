@@ -1,0 +1,93 @@
+#colorPallete {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 13% 6% 10% 6%;
+    div {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background-image: url("../Images/FondoCircle.png");
+        svg {
+            color: white;
+            width: 40px;
+            height: 40px;
+            background: none;
+        }
+    }
+}
+
+.colorPicker {
+    position: relative;
+    width: 245px;
+    margin: auto;
+    div {
+        border-radius: 10px;
+    }
+    div, span {
+        background-color: white;
+    }
+    span div {
+        border-radius: 0px;
+    }
+    input {
+        color: white;
+    }
+}
+
+#name {
+    width: 90%;
+    margin: 10% auto;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    h3 {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+    input {
+        width: 75%;
+        height: 30px;
+        color: white;
+        border: 3px solid white;
+        border-radius: 10px;
+    }
+    svg {
+        width: 20%;
+        background-color: white;
+        border-radius: 10px;
+        color: $colorPrincipal;
+    }
+}
+
+
+@media (min-width: 991.98px) {
+
+    #convertidor {
+        width: 60vw;
+        margin: 7% auto 14% auto;
+        padding: 3% 6%;
+        select {
+            width: 30%;
+        }
+        input {
+            width: 30%;
+            margin: 4% 5%;
+            margin-left: 10%;
+        }
+        .tipoUnidad {
+            width: 8%;
+            margin-right: 0%;
+        }
+        #resultado {
+            margin-left: 23%;
+            font-size: 6vw;
+        }
+        .tipoUnidad-resultado {
+            width: 8%;
+            margin-left: 5%;
+        }
+    }
+}

@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #2C2C2C;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header svg {
+  width: 6%;
+  margin: 4% 6% 2% 6%;
+  color: white;
+}
+header h1 {
+  font-size: 6vw;
+  color: white;
+}
+
+@media (min-width: 991.98px) {
+  header svg {
+    margin: 3% 4% 2% 20%;
+  }
+}
+#colorPallete {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 13% 6% 10% 6%;
+}
+#colorPallete div {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-image: url("../Images/FondoCircle.png");
+}
+#colorPallete div svg {
+  color: white;
+  width: 40px;
+  height: 40px;
+  background: none;
+}
+
+.colorPicker {
+  position: relative;
+  width: 245px;
+  margin: auto;
+}
+.colorPicker div {
+  border-radius: 10px;
+}
+.colorPicker div, .colorPicker span {
+  background-color: white;
+}
+.colorPicker span div {
+  border-radius: 0px;
+}
+.colorPicker input {
+  color: white;
+}
+
+#name {
+  width: 90%;
+  margin: 10% auto;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#name h3 {
+  width: 100%;
+  margin-bottom: 3%;
+}
+#name input {
+  width: 75%;
+  height: 30px;
+  color: white;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+#name svg {
+  width: 20%;
+  background-color: white;
+  border-radius: 10px;
+  color: #2C2C2C;
+}
+
+@media (min-width: 991.98px) {
+  #convertidor {
+    width: 60vw;
+    margin: 7% auto 14% auto;
+    padding: 3% 6%;
+  }
+  #convertidor select {
+    width: 30%;
+  }
+  #convertidor input {
+    width: 30%;
+    margin: 4% 5%;
+    margin-left: 10%;
+  }
+  #convertidor .tipoUnidad {
+    width: 8%;
+    margin-right: 0%;
+  }
+  #convertidor #resultado {
+    margin-left: 23%;
+    font-size: 6vw;
+  }
+  #convertidor .tipoUnidad-resultado {
+    width: 8%;
+    margin-left: 5%;
+  }
+}
+.saved {
+  margin: 7% 6% 14% 6%;
+}
+.saved h2 {
+  color: white;
+  font-size: 7vw;
+}
+.saved #saved .favorite {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: white;
+  margin: 3% 0;
+}
+.saved #saved .favorite h5 {
+  width: 80%;
+}
+.saved #saved .favorite svg {
+  width: 20%;
+}
+.saved #saved .favorite #colorsSaved {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  background-color: black;
+  padding: 3%;
+  margin: 2% 0;
+  border-radius: 10px;
+}
+.saved #saved .favorite #colorsSaved div {
+  border: 3px solid white;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+}
+
+@media (min-width: 991.98px) {
+  .saved {
+    width: 60%;
+    margin: 7% auto 14% auto;
+  }
+  .saved #saved {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .saved #saved .favorite {
+    width: 47%;
+  }
+  .saved #saved .favorite h1 {
+    font-size: 1.5vw;
+  }
+}/*# sourceMappingURL=estilos.css.map */

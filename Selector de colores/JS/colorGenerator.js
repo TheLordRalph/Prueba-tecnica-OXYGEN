@@ -32,7 +32,6 @@ function changPallete(element) {
     }
 }
 
-
 function selectColor() {
     let colorPickActive = document.getElementsByClassName("color-pick-active");
     colorPickActive[0].children[0].setAttribute("style", "display: none");
@@ -199,13 +198,14 @@ function createSaved() {
         while (true) {
             if (localStorage.getItem(saveds) == null) {
                 div.setAttribute("id", saveds);
+                div.setAttribute("class", "favorite");
                 break;
             } else {
                 saveds++;
             }
         }
 
-        div.innerHTML = "<div id=\"saved " + saveds +"\" class=\"favorite\"><h5\>" + inputName.value +"</h5><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-trash\" viewBox=\"0 0 16 16\"><path d=\"M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z\"/><path fill-rule=\"evenodd\" d=\"M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z\"/></svg><div class=\"colorsSaved\"><div id=\"saved " + saveds + "-1\" style=\"background-color: " + color1.title +"\"></div><div id=\"saved " + saveds + "-2\" style=\"background-color: " + color2.title +"\"></div><div id=\"saved " + saveds + "-3\" style=\"background-color: " + color3.title +"\"></div><div id=\"saved " + saveds + "-4\" style=\"background-color: " + color4.title +"\"></div><div id=\"saved " + saveds + "-5\" style=\"background-color: " + color5.title +"\"></div></div></div>";
+        div.innerHTML = "<h5\>" + inputName.value +"</h5><svg onclick=\"deleteSaved(this)\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-trash\" viewBox=\"0 0 16 16\"><path d=\"M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z\"/><path fill-rule=\"evenodd\" d=\"M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z\"/></svg><div onclick=\"selectSavedColors(this)\" class=\"colorsSaved\"><div id=\"saved" + saveds + "-1\" style=\"background-color: " + color1.title +"\"></div><div id=\"saved" + saveds + "-2\" style=\"background-color: " + color2.title +"\"></div><div id=\"saved" + saveds + "-3\" style=\"background-color: " + color3.title +"\"></div><div id=\"saved" + saveds + "-4\" style=\"background-color: " + color4.title +"\"></div><div id=\"saved" + saveds + "-5\" style=\"background-color: " + color5.title +"\"></div></div>";
     
         saved.appendChild(div);
 
@@ -233,4 +233,37 @@ function createSaved() {
         color5.children[0].setAttribute("style", "display: block");
         color5.setAttribute("style", "background-image: background-image: url(\"Images/FondoCircle.png\"); border: none; background-color: none");
     }
+}
+
+function deleteSaved(element) {
+    document.getElementById("saved").removeChild(element.parentNode);
+    localStorage.removeItem(element.parentNode.id);
+}
+
+function selectSavedColors(element) {
+    let savedColor1 = element.children[0].attributes[1].nodeValue;
+    let savedColor2 = element.children[1].attributes[1].nodeValue;
+    let savedColor3 = element.children[2].attributes[1].nodeValue;
+    let savedColor4 = element.children[3].attributes[1].nodeValue;
+    let savedColor5 = element.children[4].attributes[1].nodeValue;
+
+    document.getElementById("color1").title = savedColor1.substring(savedColor1.search("#"));
+    document.getElementById("color1").setAttribute("style", "background-image: none; border: 3px solid white; background-color: " + savedColor1.substring(savedColor1.search("#")));
+    document.getElementById("color1").children[0].setAttribute("style", "display: none");
+
+    document.getElementById("color2").title = savedColor2.substring(savedColor2.search("#"));
+    document.getElementById("color2").setAttribute("style", "background-image: none; border: 3px solid white; background-color: " + savedColor2.substring(savedColor2.search("#")));
+    document.getElementById("color2").children[0].setAttribute("style", "display: none");
+
+    document.getElementById("color3").title = savedColor3.substring(savedColor3.search("#"));
+    document.getElementById("color3").setAttribute("style", "background-image: none; border: 3px solid white; background-color: " + savedColor3.substring(savedColor3.search("#")));
+    document.getElementById("color3").children[0].setAttribute("style", "display: none");
+
+    document.getElementById("color4").title = savedColor4.substring(savedColor4.search("#"));
+    document.getElementById("color4").setAttribute("style", "background-image: none; border: 3px solid white; background-color: " + savedColor4.substring(savedColor4.search("#")));
+    document.getElementById("color4").children[0].setAttribute("style", "display: none");
+
+    document.getElementById("color5").title = savedColor5.substring(savedColor5.search("#"));
+    document.getElementById("color5").setAttribute("style", "background-image: none; border: 3px solid white; background-color: " + savedColor5.substring(savedColor5.search("#")));
+    document.getElementById("color5").children[0].setAttribute("style", "display: none");
 }

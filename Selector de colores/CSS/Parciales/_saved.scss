@@ -10,7 +10,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         color: white;
-        margin: 3% 0;
+        margin: 3% 10px;
         h5 {
             width: 80%;
         }
@@ -37,20 +37,24 @@
     
 }
 
-@media (min-width: 991.98px) {
+@media (min-width: 920px) {
 
     .saved {
-        width: 60%;
-        margin: 7% auto 14% auto;
-        #saved {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            .favorite {
-                width: 47%;
-                h1 {
-                    font-size: 1.5vw;
-                }
+        width: 95%;
+        margin: 3%;
+        h2 {
+            font-size: 4vw;
+        }
+    }
+    #saved {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .favorite {
+            width: 30%;
+            margin: 0 10px;
+            h5 {
+                font-size: 25px;
             }
         }
     }

@@ -4,23 +4,25 @@
     align-items: center;
     margin: 13% 6% 10% 6%;
     div {
-        width: 40px;
-        height: 40px;
-        border-radius: 25px;
+        width: 13vw;
+        height: 13vw;
+        border-radius: 100%;
         background-image: url("../Images/FondoCircle.png");
+        background-repeat: no-repeat;
+        background-size: contain;
         svg {
             color: white;
-            width: 40px;
-            height: 40px;
+            width: 13vw;
+            height: 13vw;
             background: none;
         }
     }
     .color-pick-active {
-        width: 50px;
-        height: 50px;
+        width: 15vw;
+        height: 15vw;
         svg {
-            width: 50px;
-            height: 50px;
+            width: 15vw;
+            height: 15vw;
         }
     }
 }
@@ -37,14 +39,48 @@
     }
     span div {
         border-radius: 0px;
+        width: 15px;
+        height: 15px;
+        .circleColorPick {
+            position: absolute; 
+            inset: 5px; 
+            background: rgb(255, 255, 255); 
+            border-radius: 50%; 
+            opacity: 1;
+            width: 5px;
+            height: 5px;
+        }
+        .opacity0 {
+            opacity: 0;
+        }
     }
     input {
         color: white;
     }
 }
 
+.flexbox-fix {
+    input {
+        padding: 0px 0px 0px 20%;
+        border: none;
+        outline: none;
+        background: none;
+        color: rgb(51, 51, 51);
+        height: 12px;
+    }
+    span {
+        position: absolute; 
+        top: 3px; 
+        left: 0px; 
+        line-height: 16px; 
+        text-transform: uppercase; 
+        font-size: 12px; 
+        color: rgb(153, 153, 153);
+    }
+}
+
 #name {
-    width: 90%;
+    width: 80%;
     margin: 10% auto;
     color: white;
     display: flex;
@@ -71,31 +107,124 @@
 }
 
 
-@media (min-width: 991.98px) {
+@media (min-width: 920px) {
 
-    #convertidor {
-        width: 60vw;
-        margin: 7% auto 14% auto;
-        padding: 3% 6%;
-        select {
-            width: 30%;
+    #colorPallete {
+        margin: 13% 20% 10% 20%;
+        div {
+            width: 8vw;
+            height: 8vw;
+            svg {
+                width: 8vw;
+                height: 8vw;
+            }
         }
-        input {
-            width: 30%;
-            margin: 4% 5%;
-            margin-left: 10%;
-        }
-        .tipoUnidad {
-            width: 8%;
-            margin-right: 0%;
-        }
-        #resultado {
-            margin-left: 23%;
-            font-size: 6vw;
-        }
-        .tipoUnidad-resultado {
-            width: 8%;
-            margin-left: 5%;
+        .color-pick-active {
+            width: 10vw;
+            height: 10vw;
+            svg {
+                width: 10vw;
+                height: 10vw;
+            }
         }
     }
+
+    #colorPickerAndName {
+        display: flex;
+        justify-content: center;
+        width: 75%;
+        margin: auto;
+        .colorPicker {
+            margin: auto 5%;
+            width: 340px;
+            * {
+                width: 335px;
+            }
+            span div {
+                width: 22px;
+                height: 22px;
+                .circleColorPick {
+                    position: absolute; 
+                    inset: 8px; 
+                    background: rgb(255, 255, 255); 
+                    border-radius: 50%; 
+                    opacity: 1;
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+            .colors {
+                width: 373px;
+            }
+        }
+
+        .flexbox-fix {
+            input {
+                padding: 0px 0px 0px 20%;
+                border: none;
+                outline: none;
+                background: none;
+                color: rgb(51, 51, 51);
+                height: 35px;
+                font-size: 19px;
+            }
+            span {
+                position: absolute; 
+                top: 8px; 
+                left: 0px; 
+                line-height: 16px; 
+                text-transform: uppercase; 
+                font-size: 19px; 
+                color: rgb(153, 153, 153);
+            }
+        }
+
+        #name {
+            margin: 10% 5%;
+            width: 40%;
+            h3 {
+                font-size: 35px;
+            }
+            input {
+                height: 80px;
+                font-size: 30px;
+            }
+            svg {
+                height: 80px;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1800px) {
+
+    #colorPickerAndName {
+        .colorPicker {
+            margin: auto 5%;
+            width: 440px;
+            * {
+                width: 435px;
+            }
+            span div {
+                width: 31px;
+                height: 31px;
+                .circleColorPick {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+
+        .flexbox-fix {
+            input {
+                font-size: 25px;
+            }
+            span {
+                top: 11px; 
+                font-size: 20px; 
+            }
+        }
+    }
+
 }

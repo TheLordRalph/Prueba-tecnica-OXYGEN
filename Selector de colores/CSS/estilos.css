@@ -11,20 +11,15 @@ header {
   justify-content: center;
 }
 header svg {
-  width: 6%;
+  width: 4%;
   margin: 4% 6% 2% 6%;
   color: white;
 }
 header h1 {
-  font-size: 6vw;
+  font-size: 4vw;
   color: white;
 }
 
-@media (min-width: 991.98px) {
-  header svg {
-    margin: 3% 4% 2% 20%;
-  }
-}
 #colorPallete {
   display: flex;
   justify-content: space-around;
@@ -32,24 +27,26 @@ header h1 {
   margin: 13% 6% 10% 6%;
 }
 #colorPallete div {
-  width: 40px;
-  height: 40px;
-  border-radius: 25px;
+  width: 13vw;
+  height: 13vw;
+  border-radius: 100%;
   background-image: url("../Images/FondoCircle.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 #colorPallete div svg {
   color: white;
-  width: 40px;
-  height: 40px;
+  width: 13vw;
+  height: 13vw;
   background: none;
 }
 #colorPallete .color-pick-active {
-  width: 50px;
-  height: 50px;
+  width: 15vw;
+  height: 15vw;
 }
 #colorPallete .color-pick-active svg {
-  width: 50px;
-  height: 50px;
+  width: 15vw;
+  height: 15vw;
 }
 
 .colorPicker {
@@ -65,13 +62,45 @@ header h1 {
 }
 .colorPicker span div {
   border-radius: 0px;
+  width: 15px;
+  height: 15px;
+}
+.colorPicker span div .circleColorPick {
+  position: absolute;
+  inset: 5px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  opacity: 1;
+  width: 5px;
+  height: 5px;
+}
+.colorPicker span div .opacity0 {
+  opacity: 0;
 }
 .colorPicker input {
   color: white;
 }
 
+.flexbox-fix input {
+  padding: 0px 0px 0px 20%;
+  border: none;
+  outline: none;
+  background: none;
+  color: rgb(51, 51, 51);
+  height: 12px;
+}
+.flexbox-fix span {
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  line-height: 16px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgb(153, 153, 153);
+}
+
 #name {
-  width: 90%;
+  width: 80%;
   margin: 10% auto;
   color: white;
   display: flex;
@@ -97,31 +126,110 @@ header h1 {
   color: #2C2C2C;
 }
 
-@media (min-width: 991.98px) {
-  #convertidor {
-    width: 60vw;
-    margin: 7% auto 14% auto;
-    padding: 3% 6%;
+@media (min-width: 920px) {
+  #colorPallete {
+    margin: 13% 20% 10% 20%;
   }
-  #convertidor select {
-    width: 30%;
+  #colorPallete div {
+    width: 8vw;
+    height: 8vw;
   }
-  #convertidor input {
-    width: 30%;
-    margin: 4% 5%;
-    margin-left: 10%;
+  #colorPallete div svg {
+    width: 8vw;
+    height: 8vw;
   }
-  #convertidor .tipoUnidad {
-    width: 8%;
-    margin-right: 0%;
+  #colorPallete .color-pick-active {
+    width: 10vw;
+    height: 10vw;
   }
-  #convertidor #resultado {
-    margin-left: 23%;
-    font-size: 6vw;
+  #colorPallete .color-pick-active svg {
+    width: 10vw;
+    height: 10vw;
   }
-  #convertidor .tipoUnidad-resultado {
-    width: 8%;
-    margin-left: 5%;
+  #colorPickerAndName {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    margin: auto;
+  }
+  #colorPickerAndName .colorPicker {
+    margin: auto 5%;
+    width: 340px;
+  }
+  #colorPickerAndName .colorPicker * {
+    width: 335px;
+  }
+  #colorPickerAndName .colorPicker span div {
+    width: 22px;
+    height: 22px;
+  }
+  #colorPickerAndName .colorPicker span div .circleColorPick {
+    position: absolute;
+    inset: 8px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    opacity: 1;
+    width: 8px;
+    height: 8px;
+  }
+  #colorPickerAndName .colorPicker .colors {
+    width: 373px;
+  }
+  #colorPickerAndName .flexbox-fix input {
+    padding: 0px 0px 0px 20%;
+    border: none;
+    outline: none;
+    background: none;
+    color: rgb(51, 51, 51);
+    height: 35px;
+    font-size: 19px;
+  }
+  #colorPickerAndName .flexbox-fix span {
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-size: 19px;
+    color: rgb(153, 153, 153);
+  }
+  #colorPickerAndName #name {
+    margin: 10% 5%;
+    width: 40%;
+  }
+  #colorPickerAndName #name h3 {
+    font-size: 35px;
+  }
+  #colorPickerAndName #name input {
+    height: 80px;
+    font-size: 30px;
+  }
+  #colorPickerAndName #name svg {
+    height: 80px;
+  }
+}
+@media (min-width: 1800px) {
+  #colorPickerAndName .colorPicker {
+    margin: auto 5%;
+    width: 440px;
+  }
+  #colorPickerAndName .colorPicker * {
+    width: 435px;
+  }
+  #colorPickerAndName .colorPicker span div {
+    width: 31px;
+    height: 31px;
+  }
+  #colorPickerAndName .colorPicker span div .circleColorPick {
+    width: 15px;
+    height: 15px;
+  }
+  #colorPickerAndName .flexbox-fix input {
+    font-size: 25px;
+  }
+  #colorPickerAndName .flexbox-fix span {
+    top: 11px;
+    font-size: 20px;
   }
 }
 .saved {
@@ -136,7 +244,7 @@ header h1 {
   flex-wrap: wrap;
   justify-content: space-between;
   color: white;
-  margin: 3% 0;
+  margin: 3% 10px;
 }
 .saved #saved .favorite h5 {
   width: 80%;
@@ -158,23 +266,26 @@ header h1 {
   border-radius: 20px;
   width: 40px;
   height: 40px;
-  background-color: red;
 }
 
-@media (min-width: 991.98px) {
+@media (min-width: 920px) {
   .saved {
-    width: 60%;
-    margin: 7% auto 14% auto;
+    width: 95%;
+    margin: 3%;
   }
-  .saved #saved {
+  .saved h2 {
+    font-size: 4vw;
+  }
+  #saved {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
-  .saved #saved .favorite {
-    width: 47%;
+  #saved .favorite {
+    width: 30%;
+    margin: 0 10px;
   }
-  .saved #saved .favorite h1 {
-    font-size: 1.5vw;
+  #saved .favorite h5 {
+    font-size: 25px;
   }
 }/*# sourceMappingURL=estilos.css.map */

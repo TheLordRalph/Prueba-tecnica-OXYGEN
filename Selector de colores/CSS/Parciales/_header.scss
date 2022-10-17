@@ -11,21 +11,16 @@ header {
     align-items: center;
     justify-content: center;
     svg {
-        width: 6%;
+        width: 4%;
         margin: 4% 6% 2% 6%;
         color: white;
     }
     h1 {
-        font-size: 6vw;
+        font-size: 4vw;
         color: white;
     }
 }
 
-@media (min-width: 991.98px) {
+@media (min-width: 920px) {
 
-    header {
-        svg {
-            margin: 3% 4% 2% 20%;
-        }
-    }
 }

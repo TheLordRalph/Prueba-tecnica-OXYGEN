@@ -35,7 +35,7 @@ function changPallete(element) {
 function selectColor() {
     let colorPickActive = document.getElementsByClassName("color-pick-active");
     colorPickActive[0].children[0].setAttribute("style", "display: none");
-    colorPickActive[0].setAttribute("style", "background-image: none; border: 3px solid white; background-color: " + document.getElementById("hex").value);
+    colorPickActive[0].setAttribute("style", "background-image: none; border: 0.5vw solid white; background-color: " + document.getElementById("hex").value);
     colorPickActive[0].setAttribute("title", document.getElementById("hex").value);
 }
 
@@ -58,10 +58,10 @@ function hexChange() {
     selectColor();
     let colors = document.getElementById("colors");
 
-    colorPorDefecto.children[0].setAttribute("style", "position: absolute; inset: 5px; background: rgb(255, 255, 255); border-radius: 50%; opacity: 0;");
+    colorPorDefecto.children[0].setAttribute("class", "opacity0");
     colors.childNodes.forEach(e => {
         if (e.nodeName == "SPAN" && e.children[0].title == document.getElementById("hex").value) {
-            e.children[0].children[0].setAttribute("style", "position: absolute; inset: 5px; background: rgb(255, 255, 255); border-radius: 50%; opacity: 1;");
+            e.children[0].children[0].setAttribute("class", "circleColorPick");
             colorPorDefecto = e.children[0];
         }
     });
@@ -174,8 +174,8 @@ function selectColorDefault(element) {
     document.getElementById("g").value = hexToRGB("g");
     document.getElementById("b").value = hexToRGB("b");
 
-    colorPorDefecto.children[0].setAttribute("style", "position: absolute; inset: 5px; background: rgb(255, 255, 255); border-radius: 50%; opacity: 0;");
-    element.children[0].setAttribute("style", "position: absolute; inset: 5px; background: rgb(255, 255, 255); border-radius: 50%; opacity: 1;");
+    colorPorDefecto.children[0].setAttribute("class", "opacity0");
+    element.children[0].setAttribute("class", "circleColorPick");
     
     colorPorDefecto.id = "";
     element.id = "colorActive";
@@ -248,22 +248,22 @@ function selectSavedColors(element) {
     let savedColor5 = element.children[4].attributes[1].nodeValue;
 
     document.getElementById("color1").title = savedColor1.substring(savedColor1.search("#"));
-    document.getElementById("color1").setAttribute("style", "background-image: none; border: 3px solid white; background-color: " + savedColor1.substring(savedColor1.search("#")));
+    document.getElementById("color1").setAttribute("style", "background-image: none; border: 0.5vw solid white; background-color: " + savedColor1.substring(savedColor1.search("#")));
     document.getElementById("color1").children[0].setAttribute("style", "display: none");
 
     document.getElementById("color2").title = savedColor2.substring(savedColor2.search("#"));
-    document.getElementById("color2").setAttribute("style", "background-image: none; border: 3px solid white; background-color: " + savedColor2.substring(savedColor2.search("#")));
+    document.getElementById("color2").setAttribute("style", "background-image: none; border: 0.5vw solid white; background-color: " + savedColor2.substring(savedColor2.search("#")));
     document.getElementById("color2").children[0].setAttribute("style", "display: none");
 
     document.getElementById("color3").title = savedColor3.substring(savedColor3.search("#"));
-    document.getElementById("color3").setAttribute("style", "background-image: none; border: 3px solid white; background-color: " + savedColor3.substring(savedColor3.search("#")));
+    document.getElementById("color3").setAttribute("style", "background-image: none; border: 0.5vw solid white; background-color: " + savedColor3.substring(savedColor3.search("#")));
     document.getElementById("color3").children[0].setAttribute("style", "display: none");
 
     document.getElementById("color4").title = savedColor4.substring(savedColor4.search("#"));
-    document.getElementById("color4").setAttribute("style", "background-image: none; border: 3px solid white; background-color: " + savedColor4.substring(savedColor4.search("#")));
+    document.getElementById("color4").setAttribute("style", "background-image: none; border: 0.5vw solid white; background-color: " + savedColor4.substring(savedColor4.search("#")));
     document.getElementById("color4").children[0].setAttribute("style", "display: none");
 
     document.getElementById("color5").title = savedColor5.substring(savedColor5.search("#"));
-    document.getElementById("color5").setAttribute("style", "background-image: none; border: 3px solid white; background-color: " + savedColor5.substring(savedColor5.search("#")));
+    document.getElementById("color5").setAttribute("style", "background-image: none; border: 0.5vw solid white; background-color: " + savedColor5.substring(savedColor5.search("#")));
     document.getElementById("color5").children[0].setAttribute("style", "display: none");
 }
